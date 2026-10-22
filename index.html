@@ -1,0 +1,60 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A sample project costing dashboard">
+  <title>Costing Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="dashboard">
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">PROJECT FINANCE</p>
+        <h1>Costing dashboard</h1>
+        <p class="subtitle">A simple overview of your project budget.</p>
+      </div>
+      <span class="period">Sample project · Q4 2026</span>
+    </header>
+
+    <section class="summary" aria-label="Budget summary">
+      <article class="summary-card">
+        <p class="label">Total budget</p>
+        <p class="value" id="budget-total">$0</p>
+      </article>
+      <article class="summary-card">
+        <p class="label">Planned spend</p>
+        <p class="value" id="planned-total">$0</p>
+      </article>
+      <article class="summary-card">
+        <p class="label">Budget remaining</p>
+        <p class="value" id="remaining-total">$0</p>
+      </article>
+    </section>
+
+    <section class="panel" aria-labelledby="cost-heading">
+      <div class="panel-heading">
+        <div>
+          <h2 id="cost-heading">Cost breakdown</h2>
+          <p>Example line items for a small website project.</p>
+        </div>
+        <span class="badge" id="item-count">0 items</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th scope="col">Category</th><th scope="col">Owner</th><th scope="col">Status</th><th scope="col" class="amount">Cost</th></tr>
+          </thead>
+          <tbody id="cost-rows"></tbody>
+          <tfoot>
+            <tr><th colspan="3" scope="row">Planned total</th><td class="amount" id="table-total">$0</td></tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+    <footer>Sample data for demonstration. Replace the entries in <code>app.js</code> with your project costs.</footer>
+  </main>
+</body>
+</html>
